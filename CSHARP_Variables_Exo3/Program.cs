@@ -6,16 +6,18 @@ namespace CSHARP_Variables_Exo3
     {
         static void Main(string[] args)
         {
-            string value1;
-            string value2;
-
             Console.WriteLine("Choose a value");
-            value1 = Console.ReadLine();
-            Console.WriteLine("You entered '{0}'", value1);
+            int value1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"You entered '{value1}', '{value1}' + 33 equals {value1+33}");
+            value1 = value1 + 33;
 
             Console.WriteLine("Choose another value");
-            value2 = Console.ReadLine();
-            Console.WriteLine("You entered '{0}'", value2);
+            int value2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"You entered '{value2}', '{value2++}'  + 1 equals '{value2}'");
+            value2 = value2++;
+
+            Console.WriteLine($"{value1} divided by {value2} equals {value1 / value2}");
+
         }
     }
 }
